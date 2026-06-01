@@ -1,0 +1,6 @@
+{
+  "Name": "19_E_Simple_Login_Automation",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}

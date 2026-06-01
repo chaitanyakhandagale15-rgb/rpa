@@ -1,0 +1,117 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DetectPHI" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="hitsDT" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="refDir" Type="InArgument(x:String)" />
+    <x:Property Name="rawText" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>DetectPHI_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="DetectPHI" sap:VirtualizedContainerService.HintSize="868.4000000000001,303.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[hitsDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="449.6,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Field&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Value&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Page&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;StartIdx&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EndIdx&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Expect arguments mapped in the Invoke Code activity:&#xA;' rawText As String (In), refDir As String (In), hitsDT As DataTable (In/Out)&#xA;&#xA;' Ensure hitsDT exists and has the expected columns&#xA;If hitsDT Is Nothing Then&#xA;    hitsDT = New System.Data.DataTable()&#xA;End If&#xA;If hitsDT.Columns.Count = 0 Then&#xA;    hitsDT.Columns.Add(&quot;Field&quot;, GetType(String))&#xA;    hitsDT.Columns.Add(&quot;Value&quot;, GetType(String))&#xA;    hitsDT.Columns.Add(&quot;Page&quot;, GetType(Int32))&#xA;    hitsDT.Columns.Add(&quot;StartIdx&quot;, GetType(Int32))&#xA;    hitsDT.Columns.Add(&quot;EndIdx&quot;, GetType(Int32))&#xA;End If&#xA;&#xA;' Build regex file path and validate&#xA;Dim regexFilePath As String = System.IO.Path.Combine(refDir, &quot;regex_patterns.json&quot;)&#xA;System.Diagnostics.Debug.WriteLine(&quot;regexFilePath=&quot; &amp; regexFilePath)&#xA;If Not System.IO.File.Exists(regexFilePath) Then&#xA;    ' Don't throw—just log, return empty hits so the pipeline continues&#xA;    System.Diagnostics.Debug.WriteLine(&quot;regex_patterns.json NOT FOUND at: &quot; &amp; regexFilePath)&#xA;    Return&#xA;End If&#xA;&#xA;' Load patterns&#xA;Dim jsonText As String = System.IO.File.ReadAllText(regexFilePath)&#xA;Dim patternsObj As Newtonsoft.Json.Linq.JObject = Newtonsoft.Json.Linq.JObject.Parse(jsonText)&#xA;&#xA;' Iterate patterns safely (one bad regex won't break the run)&#xA;For Each prop As Newtonsoft.Json.Linq.JProperty In patternsObj.Properties()&#xA;    Dim label As String = prop.Name&#xA;    Dim pat As String = prop.Value.ToString()&#xA;&#xA;    Dim matches As System.Text.RegularExpressions.MatchCollection =&#xA;        System.Text.RegularExpressions.Regex.Matches(&#xA;            If(rawText, String.Empty),&#xA;            pat,&#xA;            System.Text.RegularExpressions.RegexOptions.IgnoreCase&#xA;        )&#xA;&#xA;    For Each m As System.Text.RegularExpressions.Match In matches&#xA;        Dim v As String = m.Value&#xA;        Dim page As Integer = 1&#xA;        Dim startIdx As Integer = m.Index&#xA;        Dim endIdx As Integer = m.Index + m.Length&#xA;&#xA;        Dim addRow As Boolean = True&#xA;&#xA;        ' --- DOB filtering logic ---&#xA;        If label.Equals(&quot;DOB&quot;, StringComparison.OrdinalIgnoreCase) _&#xA;           Or label.Equals(&quot;DOB_Labeled&quot;, StringComparison.OrdinalIgnoreCase) _&#xA;           Or label.Equals(&quot;DateGeneric&quot;, StringComparison.OrdinalIgnoreCase) Then&#xA;&#xA;            ' Extract 40 chars of left/right context safely&#xA;            Dim leftStart As Integer = Math.Max(0, startIdx - 40)&#xA;            Dim leftLen As Integer = startIdx - leftStart&#xA;            Dim rightLen As Integer = Math.Min(40, Math.Max(0, rawText.Length - endIdx))&#xA;            Dim leftCtx As String = rawText.Substring(leftStart, leftLen)&#xA;            Dim rightCtx As String = rawText.Substring(endIdx, rightLen)&#xA;            Dim ctx As String = (leftCtx &amp; &quot; &quot; &amp; rightCtx).ToLowerInvariant()&#xA;&#xA;            ' Strong positive cues&#xA;            Dim hasDobLabel As Boolean =&#xA;                ctx.Contains(&quot;dob&quot;) OrElse ctx.Contains(&quot;d.o.b&quot;) OrElse ctx.Contains(&quot;date of birth&quot;)&#xA;&#xA;            ' Strong negative cues (common business/claims dates)&#xA;            Dim hasNeg As Boolean =&#xA;                ctx.Contains(&quot;dos&quot;) OrElse ctx.Contains(&quot;date of service&quot;) OrElse ctx.Contains(&quot;service date&quot;) OrElse&#xA;                ctx.Contains(&quot;due date&quot;) OrElse ctx.Contains(&quot;invoice date&quot;) OrElse ctx.Contains(&quot;payment date&quot;) OrElse&#xA;                ctx.Contains(&quot;received&quot;) OrElse ctx.Contains(&quot;submitted&quot;) OrElse ctx.Contains(&quot;effective&quot;) OrElse&#xA;                ctx.Contains(&quot;expiration&quot;) OrElse ctx.Contains(&quot;exp &quot;) OrElse ctx.Contains(&quot; from &quot;) OrElse&#xA;                ctx.Contains(&quot; to &quot;) OrElse ctx.Contains(&quot; through &quot;)&#xA;&#xA;            ' Year plausibility&#xA;            Dim year As Integer = -1&#xA;            Dim yearMatch = System.Text.RegularExpressions.Regex.Match(v, &quot;(19|20)\d{2}&quot;)&#xA;            If yearMatch.Success Then&#xA;                Integer.TryParse(yearMatch.Value, year)&#xA;            End If&#xA;            Dim maxBirthYear As Integer = Now.Year - 10&#xA;            Dim yearPlausible As Boolean = (year &gt;= 1900 AndAlso year &lt;= maxBirthYear)&#xA;&#xA;            ' Decide&#xA;            If hasNeg Then&#xA;                addRow = False&#xA;            ElseIf hasDobLabel Then&#xA;                addRow = yearPlausible ' labeled but still sanity-check year&#xA;                If addRow Then label = &quot;DOB&quot; ' normalize label&#xA;            Else&#xA;                ' Unlabeled: require plausible year + no negative cues&#xA;                addRow = yearPlausible&#xA;                If addRow Then label = &quot;DOB&quot; ' treat as DOB only if it passed filters&#xA;            End If&#xA;        End If&#xA;        ' --- end DOB filtering ---&#xA;&#xA;        If addRow Then&#xA;            hitsDT.Rows.Add(label, v, page, startIdx, endIdx)&#xA;        End If&#xA;    Next&#xA;Next&#xA;&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="449.6,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="rawText">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="rawText" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="refDir">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="refDir" />
+        </InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="hitsDT">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="hitsDT" />
+        </OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+  </Sequence>
+</Activity>

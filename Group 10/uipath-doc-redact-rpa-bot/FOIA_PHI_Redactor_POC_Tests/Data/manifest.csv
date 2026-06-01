@@ -1,0 +1,31 @@
+DocName,Descriptor,Notes
+01_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+02_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+03_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+04_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+05_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+06_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+07_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+08_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+09_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+10_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+11_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+12_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+13_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+14_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+15_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+16_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+17_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+18_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+19_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+20_NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid.pdf,NORMAL_SSN-Valid_DOB-MMDDYYYY_Phone-Var_Email-Valid,Normal
+21_TRICKY_SSN-Lookalike_OrderNum_123-45-6789.pdf,TRICKY_SSN-Lookalike_OrderNum_123-45-6789,Tricky near-miss
+22_TRICKY_DOB-Invalid_13-40-2025.pdf,TRICKY_DOB-Invalid_13-40-2025,Tricky near-miss
+23_TRICKY_Email-Obfuscated_name[at]domain[dot]com.pdf,TRICKY_Email-Obfuscated_name[at]domain[dot]com,Tricky near-miss
+24_TRICKY_Phone_10digits_undelimited.pdf,TRICKY_Phone_10digits_undelimited,Tricky near-miss
+25_TRICKY_Address_CueOnly_NoAddress.pdf,TRICKY_Address_CueOnly_NoAddress,Tricky near-miss
+26_TRICKY_VIN_Lookalike.pdf,TRICKY_VIN_Lookalike,Tricky near-miss
+27_TRICKY_URL_looks_like_email.pdf,TRICKY_URL_looks_like_email,Tricky near-miss
+28_TRICKY_IPv4_Address_10.42.0.15.pdf,TRICKY_IPv4_Address_10.42.0.15,Tricky near-miss
+29_TRICKY_MRN_ShortToken_MRN-12A.pdf,TRICKY_MRN_ShortToken_MRN-12A,Tricky near-miss
+30_TRICKY_DOS_ISO_2025-08-01.pdf,TRICKY_DOS_ISO_2025-08-01,Tricky near-miss

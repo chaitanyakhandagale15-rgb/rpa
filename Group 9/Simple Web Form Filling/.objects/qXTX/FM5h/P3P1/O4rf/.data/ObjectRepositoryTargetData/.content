@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ERecG5bft0OFFNE0IUhmRg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="docs.google.com/forms/d/e/1FAIpQLSdOqpUfBje2ZrCrbuyrkECGaLEaD5xyFPHf2lLqy9MN-FSzTA/viewform" DesignTimeRectangle="62, 640, 257, 30" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" Guid="746becc2-25d8-4c29-9ea8-e7879517adc3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Registration form' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="1feb9a4c87096f7bc7819806e3e443e4.jpg" xmlns="">0hMTHbnKSdEKWyKkRzZaMkg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

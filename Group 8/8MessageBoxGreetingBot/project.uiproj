@@ -1,0 +1,6 @@
+{
+  "Name": "8MessageBoxGreetingBot",
+  "ProjectType": "Process",
+  "Description": "",
+  "MainFile": "Main.xaml"
+}

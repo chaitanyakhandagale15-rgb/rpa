@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Spotify Free",
+  "Type": "Screen",
+  "Id": "jmaD5wQ_4Eer1ZyFPVJe3w",
+  "Reference": "YVJrLtXqO0G19bWmH8UxPw/jmaD5wQ_4Eer1ZyFPVJe3w",
+  "ParentRef": "YVJrLtXqO0G19bWmH8UxPw/9qXSZpXKrkieIry27GqNkA",
+  "Created": "2026-05-31T08:38:48.9361307Z",
+  "Updated": "2026-05-31T08:38:48.9361307Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

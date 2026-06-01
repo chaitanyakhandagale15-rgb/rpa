@@ -1,0 +1,6 @@
+{
+  "UiPath.AppleNumbers.Activities": "1.0.3",
+  "UiPath.GSuite.Activities": "3.9.10",
+  "UiPath.MicrosoftOffice365.Activities": "3.9.10",
+  "UiPath.System.Activities": "26.4.1-preview"
+}

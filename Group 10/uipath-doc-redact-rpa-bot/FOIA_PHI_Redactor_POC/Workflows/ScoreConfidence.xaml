@@ -1,0 +1,168 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ScoreConfidence" this:ScoreConfidence.docType="General" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="confidence" Type="OutArgument(x:Double)" />
+    <x:Property Name="reasons" Type="OutArgument(scg:List(x:String))" />
+    <x:Property Name="docType" Type="InArgument(x:String)" />
+    <x:Property Name="rawText" Type="InArgument(x:String)" />
+    <x:Property Name="hitsDT" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>ScoreConfidence_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ScoreConfidence" sap:VirtualizedContainerService.HintSize="959.2,378.8566666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="tmpStr">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Int32" Name="implausibleDOBCount">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Int32" Name="nearMissSSNCount">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Int32" Name="totalHits">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Name="hasPhone">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Boolean" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Name="hasEmail">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Boolean" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Name="hasDOB">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Boolean" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Name="hasSSN">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Boolean" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Arguments expected (mapped in Invoke Code dialog):&#xD;&#xA;' hitsDT As DataTable (In)&#xD;&#xA;' rawText As String (In)&#xD;&#xA;' docType As String (In)&#xD;&#xA;' confidence As Double (Out)&#xD;&#xA;' reasons As System.Collections.Generic.List(Of String) (Out)&#xD;&#xA;&#xD;&#xA;' Initialize outputs&#xD;&#xA;confidence = 1.0&#xD;&#xA;If reasons Is Nothing Then&#xD;&#xA;    reasons = New System.Collections.Generic.List(Of String)()&#xD;&#xA;Else&#xD;&#xA;    reasons.Clear()&#xD;&#xA;End If&#xD;&#xA;&#xD;&#xA;' Guard the table&#xD;&#xA;If hitsDT Is Nothing OrElse hitsDT.Columns.Count = 0 Then&#xD;&#xA;    confidence = 0.4&#xD;&#xA;    reasons.Add(&quot;No detections table (empty or missing).&quot;)&#xD;&#xA;    GoTo ClampAndExit&#xD;&#xA;End If&#xD;&#xA;&#xD;&#xA;' Helpers&#xD;&#xA;Dim hasFieldCol As Boolean = hitsDT.Columns.Contains(&quot;Field&quot;)&#xD;&#xA;Dim hasValueCol As Boolean = hitsDT.Columns.Contains(&quot;Value&quot;)&#xD;&#xA;If Not hasFieldCol Then&#xD;&#xA;    confidence = 0.4&#xD;&#xA;    reasons.Add(&quot;Detections table missing 'Field' column.&quot;)&#xD;&#xA;    GoTo ClampAndExit&#xD;&#xA;End If&#xD;&#xA;&#xD;&#xA;' Count &amp; presence flags&#xD;&#xA;Dim totalHits As Integer = hitsDT.Rows.Count&#xD;&#xA;&#xD;&#xA;Dim hasSSN As Boolean = hitsDT.Select(&quot;Field = 'SSN'&quot;).Length &gt; 0&#xD;&#xA;Dim hasDOB As Boolean = hitsDT.Select(&quot;Field = 'DOB'&quot;).Length &gt; 0&#xD;&#xA;Dim hasEmail As Boolean = hitsDT.Select(&quot;Field = 'Email'&quot;).Length &gt; 0&#xD;&#xA;Dim hasPhone As Boolean = hitsDT.Select(&quot;Field = 'Phone'&quot;).Length &gt; 0&#xD;&#xA;&#xD;&#xA;' Penalize missing core PHI on likely claim/clinical docs&#xD;&#xA;Dim isClaimOrClinical As Boolean = _&#xD;&#xA;    (Not String.IsNullOrEmpty(docType) AndAlso _&#xD;&#xA;     (docType.Equals(&quot;Claim&quot;, StringComparison.OrdinalIgnoreCase) OrElse _&#xD;&#xA;      docType.Equals(&quot;Clinical&quot;, StringComparison.OrdinalIgnoreCase)))&#xD;&#xA;&#xD;&#xA;If isClaimOrClinical Then&#xD;&#xA;    If Not hasSSN Then&#xD;&#xA;        confidence -= 0.2&#xD;&#xA;        reasons.Add(&quot;No SSN found in claim/clinical doc.&quot;)&#xD;&#xA;    End If&#xD;&#xA;    If Not hasDOB Then&#xD;&#xA;        confidence -= 0.2&#xD;&#xA;        reasons.Add(&quot;No DOB found in claim/clinical doc.&quot;)&#xD;&#xA;    End If&#xD;&#xA;    If Not hasEmail Then&#xD;&#xA;        confidence -= 0.1&#xD;&#xA;        reasons.Add(&quot;No Email found in claim/clinical doc.&quot;)&#xD;&#xA;    End If&#xD;&#xA;    If Not hasPhone Then&#xD;&#xA;        confidence -= 0.1&#xD;&#xA;        reasons.Add(&quot;No Phone found in claim/clinical doc.&quot;)&#xD;&#xA;    End If&#xD;&#xA;End If&#xD;&#xA;&#xD;&#xA;' Low evidence cap&#xD;&#xA;If totalHits &lt; 2 Then&#xD;&#xA;    If confidence &gt; 0.6 Then confidence = 0.6&#xD;&#xA;    reasons.Add(&quot;Low evidence: fewer than 2 total hits.&quot;)&#xD;&#xA;End If&#xD;&#xA;&#xD;&#xA;' DOB plausibility (implausible years)&#xD;&#xA;Dim implausibleDOBCount As Integer = 0&#xD;&#xA;If hasValueCol Then&#xD;&#xA;    Dim dobRows As System.Data.DataRow() = hitsDT.Select(&quot;Field = 'DOB'&quot;)&#xD;&#xA;    For Each r As System.Data.DataRow In dobRows&#xD;&#xA;        Dim v As String = System.Convert.ToString(r(&quot;Value&quot;))&#xD;&#xA;        Dim yrMatch As System.Text.RegularExpressions.Match = _&#xD;&#xA;            System.Text.RegularExpressions.Regex.Match(v, &quot;(19|20)\d{2}&quot;)&#xD;&#xA;        If yrMatch.Success Then&#xD;&#xA;            Dim y As Integer&#xD;&#xA;            If Integer.TryParse(yrMatch.Value, y) Then&#xD;&#xA;                Dim maxBirthYear As Integer = System.DateTime.Now.Year - 10&#xD;&#xA;                If y &lt; 1900 OrElse y &gt; maxBirthYear Then&#xD;&#xA;                    implausibleDOBCount += 1&#xD;&#xA;                End If&#xD;&#xA;            End If&#xD;&#xA;        End If&#xD;&#xA;    Next&#xD;&#xA;End If&#xD;&#xA;If implausibleDOBCount &gt; 0 Then&#xD;&#xA;    confidence -= 0.1 * implausibleDOBCount&#xD;&#xA;    reasons.Add(&quot;Implausible DOB year detected (&quot; &amp; implausibleDOBCount.ToString() &amp; &quot;).&quot;)&#xD;&#xA;End If&#xD;&#xA;&#xD;&#xA;' Near-miss SSN penalty (SSN label but not strict ###-##-####)&#xD;&#xA;Dim nearMissSSNCount As Integer = 0&#xD;&#xA;If hasValueCol Then&#xD;&#xA;    Dim ssnRows As System.Data.DataRow() = hitsDT.Select(&quot;Field = 'SSN'&quot;)&#xD;&#xA;    For Each r As System.Data.DataRow In ssnRows&#xD;&#xA;        Dim v As String = System.Convert.ToString(r(&quot;Value&quot;))&#xD;&#xA;        Dim ok As Boolean = System.Text.RegularExpressions.Regex.IsMatch(v, &quot;^\d{3}-\d{2}-\d{4}$&quot;)&#xD;&#xA;        If Not ok Then nearMissSSNCount += 1&#xD;&#xA;    Next&#xD;&#xA;End If&#xD;&#xA;If nearMissSSNCount &gt; 0 Then&#xD;&#xA;    confidence -= 0.2&#xD;&#xA;    reasons.Add(&quot;Potential near-miss SSN format.&quot;)&#xD;&#xA;End If&#xD;&#xA;&#xD;&#xA;' Positive nudges for diversity of PHI types&#xD;&#xA;Dim distinctTypes As Integer = 0&#xD;&#xA;Try&#xD;&#xA;    distinctTypes = hitsDT.DefaultView.ToTable(True, &quot;Field&quot;).Rows.Count&#xD;&#xA;Catch&#xD;&#xA;    distinctTypes = 0&#xD;&#xA;End Try&#xD;&#xA;If distinctTypes &gt;= 2 Then&#xD;&#xA;    Dim bump As Double = 0.05 * System.Math.Min(3, distinctTypes - 1)&#xD;&#xA;    confidence = System.Math.Min(1.0, confidence + bump)&#xD;&#xA;    reasons.Add(&quot;Multiple PHI types detected (&quot; &amp; distinctTypes.ToString() &amp; &quot;).&quot;)&#xD;&#xA;End If&#xD;&#xA;&#xD;&#xA;' Extraction quality (empty text)&#xD;&#xA;If String.IsNullOrWhiteSpace(rawText) Then&#xD;&#xA;    confidence -= 0.2&#xD;&#xA;    reasons.Add(&quot;Empty text extraction (consider OCR fallback).&quot;)&#xD;&#xA;End If&#xD;&#xA;&#xD;&#xA;' Clamp to [0,1] and default reason&#xD;&#xA;ClampAndExit:&#xD;&#xA;If confidence &lt; 0.0 Then confidence = 0.0&#xD;&#xA;If confidence &gt; 1.0 Then confidence = 1.0&#xD;&#xA;If reasons.Count = 0 Then reasons.Add(&quot;Deterministic pass; no risk signals.&quot;)&#xD;&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="449.6,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="hitsDT">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="hitsDT" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="rawText">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="rawText" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="docType">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="docType" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:Double" x:Key="confidence">
+          <VisualBasicReference x:TypeArguments="x:Double" ExpressionText="confidence" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="reasons">
+          <VisualBasicReference x:TypeArguments="scg:List(x:String)" ExpressionText="reasons" />
+        </OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+  </Sequence>
+</Activity>

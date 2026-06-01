@@ -1,0 +1,6 @@
+{
+  "Name": "Automatic Screenshot Capture",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}

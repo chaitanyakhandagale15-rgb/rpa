@@ -1,0 +1,6 @@
+{
+  "Name": "PDFTextReader",
+  "ProjectType": "Process",
+  "Description": "",
+  "MainFile": "Main.xaml"
+}

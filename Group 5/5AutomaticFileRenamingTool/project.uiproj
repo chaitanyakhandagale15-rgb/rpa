@@ -1,0 +1,6 @@
+{
+  "Name": "5AutomaticFileRenamingTool",
+  "ProjectType": "Process",
+  "Description": "",
+  "MainFile": "Main.xaml"
+}

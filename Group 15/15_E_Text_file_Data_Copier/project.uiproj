@@ -1,0 +1,6 @@
+{
+  "Name": "15_E_Text_file_Data_Copier",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}

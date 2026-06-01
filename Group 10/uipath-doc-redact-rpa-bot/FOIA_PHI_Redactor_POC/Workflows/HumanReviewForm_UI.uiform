@@ -1,0 +1,77 @@
+﻿{
+  "Metadata": {
+    "Id": "b94ec833-6db0-4d8a-bb32-2e2bb169cad8",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "HumanReviewForm_UI"
+  },
+  "Data": {
+    "components": [
+            {
+  "type": "htmlelement",
+  "key": "docPreview",
+  "label": "Document",
+  "input": false,
+  "tableView": false,
+  "tag": "div",
+  "content": "<h2 style=\"margin:0 0 8px 0;\">FOIA / Privacy PHI Redaction Review</h2><div><b>Document:</b> {{docName}}</div><div><b>Confidence:</b> {{confidence}}</div><div><b>Reasons:</b> {{reasons}}</div><hr/>"
+},
+      {
+        "type": "editgrid",
+        "key": "hitTable",
+        "label": "Detected PHI (edit as needed)",
+        "input": true,
+        "tableView": true,
+        "validate": { "required": true },
+        "components": [
+          { "type": "select", "label": "Entity Type", "key": "entityType", "input": true,
+            "data": { "values": [
+              { "label": "SSN", "value": "SSN" },
+              { "label": "DOB", "value": "DOB" },
+              { "label": "Email", "value": "Email" },
+              { "label": "Phone", "value": "Phone" },
+              { "label": "MRN", "value": "MRN" },
+              { "label": "Address", "value": "Address" },
+              { "label": "Name", "value": "Name" }
+            ] },
+            "validate": { "required": true } },
+          { "type": "textfield", "label": "Text Snippet / Value", "key": "textSnippet", "input": true, "validate": { "required": true } },
+          { "type": "number", "label": "Page", "key": "page", "input": true, "defaultValue": 1, "validate": { "min": 1 } },
+          { "type": "number", "label": "Start Offset", "key": "startOffset", "input": true, "defaultValue": 0 },
+          { "type": "number", "label": "End Offset", "key": "endOffset", "input": true, "defaultValue": 0 }
+        ],
+        "defaultValue": "{{hitsArray}}",
+        "description": "Add, edit, or remove PHI rows before finalizing."
+      },
+      {
+        "type": "number",
+        "key": "confidence",
+        "label": "Confidence Score",
+        "input": true,
+        "disabled": true,
+        "tableView": false,
+        "defaultValue": "{{confidence}}"
+      },
+      {
+        "type": "textarea",
+        "key": "reviewerNotes",
+        "label": "Reviewer Notes",
+        "placeholder": "Optional: add context about any changes.",
+        "input": true,
+        "tableView": false
+      },
+      {
+        "type": "button",
+        "key": "submit",
+        "label": "Approve & Continue",
+        "action": "submit",
+        "theme": "primary",
+        "block": true,
+        "disableOnInvalid": true,
+        "input": true,
+        "tableView": false
+      }
+    ]
+  }
+}

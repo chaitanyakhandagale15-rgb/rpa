@@ -1,0 +1,30 @@
+
+# UiPath generated folders
+.local/
+.settings/
+.screenshots/
+.cache/
+.project/
+.tmh/
+user.config
+~Main.xaml
+.objects/
+
+# Output & logs
+logs/
+output/
+input/
+input_original/
+input_realistic/
+
+# Packages
+*.nupkg
+._Main.xaml
+
+artifacts/
+**/project.json.user
+**/.local/
+**/packages/
+**/Logs/
+**/Temp/
+*.local

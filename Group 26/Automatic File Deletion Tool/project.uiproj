@@ -1,0 +1,6 @@
+{
+  "Name": "Automatic File Deletion Tool",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}

@@ -1,0 +1,257 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="RedactAndSave" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="manifestPath" Type="OutArgument(x:String)" />
+    <x:Property Name="redactedPath" Type="OutArgument(x:String)" />
+    <x:Property Name="outputDir" Type="InArgument(x:String)" />
+    <x:Property Name="hitsDT" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="rawText" Type="InArgument(x:String)" />
+    <x:Property Name="filePath" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>RedactAndSave_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.FTP.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.FTP.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="RedactAndSave" sap:VirtualizedContainerService.HintSize="953.2,2316" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="htmlUri" />
+      <Variable x:TypeArguments="x:String" Name="tmpJson" />
+      <Variable x:TypeArguments="x:Boolean" Name="pdfExists" />
+      <Variable x:TypeArguments="x:String" Name="edgeExe" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
+      <Variable x:TypeArguments="x:String" Name="htmlPath" />
+      <Variable x:TypeArguments="x:String" Name="docStem" />
+      <Variable x:TypeArguments="x:String" Name="manifestPathVar" />
+      <Variable x:TypeArguments="x:String" Name="sanitizedText" />
+      <Variable x:TypeArguments="x:String" Name="tempDocxPath" />
+      <Variable x:TypeArguments="x:String" Name="docStemVar" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' In:  rawText, hitsDT, filePath, outputDir&#xA;' Out: sanitized, manifestPath, docStem&#xA;&#xA;outputDir = If(String.IsNullOrEmpty(outputDir), &quot;.\output&quot;, outputDir)&#xA;&#xA;If Not System.IO.Directory.Exists(outputDir) Then&#xA;    System.IO.Directory.CreateDirectory(outputDir)&#xA;End If&#xA;&#xA;docStem = System.IO.Path.GetFileNameWithoutExtension(filePath)&#xA;&#xA;manifestPath = System.IO.Path.Combine(outputDir, docStem &amp; &quot;_redactions.csv&quot;)&#xA;&#xA;Dim seen As New System.Collections.Generic.HashSet(Of String)(System.StringComparer.OrdinalIgnoreCase)&#xA;Dim sb As New System.Text.StringBuilder()&#xA;sb.AppendLine(&quot;Field,Original,MaskedPreview&quot;)&#xA;&#xA;sanitized = If(rawText, String.Empty)&#xA;&#xA;' 3) Gather unique (Field,Value) pairs and sort longer values first&#xA;Dim pairs As New System.Collections.Generic.List(Of System.Tuple(Of String, String))()&#xA;&#xA;If hitsDT IsNot Nothing AndAlso hitsDT.Columns.Contains(&quot;Field&quot;) AndAlso hitsDT.Columns.Contains(&quot;Value&quot;) Then&#xA;    For Each r As System.Data.DataRow In hitsDT.Rows&#xA;        Dim fld As String = System.Convert.ToString(r(&quot;Field&quot;))&#xA;        Dim val As String = System.Convert.ToString(r(&quot;Value&quot;))&#xA;        If Not String.IsNullOrEmpty(val) Then&#xA;            pairs.Add(System.Tuple.Create(fld, val))&#xA;        End If&#xA;    Next&#xA;End If&#xA;&#xA;' De-duplicate case-insensitively by (Field,Value)&#xA;Dim unique As New System.Collections.Generic.Dictionary(Of String, System.Tuple(Of String, String))(System.StringComparer.OrdinalIgnoreCase)&#xA;For Each t In pairs&#xA;    Dim key As String = t.Item1 &amp; &quot;::&quot; &amp; t.Item2&#xA;    If Not unique.ContainsKey(key) Then unique.Add(key, t)&#xA;Next&#xA;&#xA;' Sort by Value length DESC to avoid partial masking collisions&#xA;Dim ordered = New System.Collections.Generic.List(Of System.Tuple(Of String, String))(unique.Values)&#xA;ordered.Sort(Function(a, b) b.Item2.Length.CompareTo(a.Item2.Length))&#xA;&#xA;For Each t In ordered&#xA;    Dim fld As String = t.Item1&#xA;    Dim val As String = t.Item2&#xA;&#xA;    ' Build a masking token (e.g., [REDACTED: SSN])&#xA;    Dim token As String = &quot;[REDACTED: &quot; &amp; fld &amp; &quot;]&quot;&#xA;&#xA;    ' Only log each unique (Field,Value) once to the manifest&#xA;    Dim key As String = fld &amp; &quot;::&quot; &amp; val&#xA;    If Not seen.Contains(key) Then&#xA;        seen.Add(key)&#xA;        ' Masked preview&#xA;        Dim preview As String = &quot;&quot;&#xA;        If fld.Equals(&quot;SSN&quot;, StringComparison.OrdinalIgnoreCase) AndAlso val.Length &gt;= 4 Then&#xA;            preview = &quot;***-**-&quot; &amp; val.Substring(val.Length - 4)&#xA;        ElseIf fld.Equals(&quot;Email&quot;, StringComparison.OrdinalIgnoreCase) Then&#xA;            Dim atIdx = val.IndexOf(&quot;@&quot;c)&#xA;            preview = If(atIdx &gt; 0, &quot;***&quot; &amp; val.Substring(atIdx), &quot;***&quot;)&#xA;        ElseIf fld.Equals(&quot;Phone&quot;, StringComparison.OrdinalIgnoreCase) Then&#xA;            Dim d As String = System.Text.RegularExpressions.Regex.Replace(val, &quot;\D&quot;, &quot;&quot;)&#xA;            preview = If(d.Length &gt;= 4, &quot;***-***-&quot; &amp; d.Substring(d.Length - 4), &quot;***&quot;)&#xA;        Else&#xA;            preview = &quot;***&quot;&#xA;        End If&#xA;        sb.AppendLine(fld.Replace(&quot;,&quot;, &quot; &quot;) &amp; &quot;,&quot;&quot;&quot; &amp; val.Replace(&quot;&quot;&quot;&quot;, &quot;&quot;&quot;&quot;&quot;&quot;) &amp; &quot;&quot;&quot;,&quot;&quot;&quot; &amp; preview &amp; &quot;&quot;&quot;&quot;)&#xA;    End If&#xA;&#xA;    ' Case-insensitive literal replacement&#xA;    Dim pattern As String = System.Text.RegularExpressions.Regex.Escape(val)&#xA;    sanitized = System.Text.RegularExpressions.Regex.Replace(&#xA;        sanitized, pattern, token,&#xA;        System.Text.RegularExpressions.RegexOptions.IgnoreCase)&#xA;Next&#xA;&#xA;&#xA;System.IO.File.WriteAllText(manifestPath, sb.ToString())&#xA;&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="468.8,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="rawText">[rawText]</InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="hitsDT">[hitsDT]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="filePath">[filePath]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="outputDir">[outputDir]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="sanitized">[sanitizedText]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="manifestPath">[manifestPathVar]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="docStem">[docStem]</OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <Assign sap:VirtualizedContainerService.HintSize="468.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[docStem]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[If(String.IsNullOrEmpty(docStem), System.IO.Path.GetFileNameWithoutExtension(filePath), docStem)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="468.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[htmlPath]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[System.IO.Path.GetFullPath(System.IO.Path.Combine(outputDir, docStem + "_redacted.html"))]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim html As String =&#xD;&#xA;    &quot;&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;&quot;utf-8&quot;&quot;&gt;&lt;title&gt;Redacted&lt;/title&gt;&quot; &amp;&#xD;&#xA;    &quot;&lt;style&gt;body{font-family:Segoe UI,Arial,Helvetica,sans-serif;white-space:pre-wrap;}&lt;/style&gt;&quot; &amp;&#xD;&#xA;    &quot;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;&quot; &amp;&#xD;&#xA;    System.Net.WebUtility.HtmlEncode(If(sanitized, String.Empty)) &amp;&#xD;&#xA;    &quot;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;&quot;&#xD;&#xA;&#xD;&#xA;System.IO.File.WriteAllText(htmlPath, html, System.Text.Encoding.UTF8)&#xD;&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="468.8,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="sanitized">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="sanitizedText" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="htmlPath">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="htmlPath" />
+        </InArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <Assign sap:VirtualizedContainerService.HintSize="468.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[redactedPath]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[System.IO.Path.GetFullPath(System.IO.Path.Combine(outputDir, docStem + "_redacted.pdf"))]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="468.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[htmlUri]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["file:///" + htmlPath.Replace("\", "/")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="468.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[edgeExe]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="[&quot;--headless=new --no-first-run --no-default-browser-check --disable-gpu &quot; &amp;&#xD;&#xA;&quot;--print-to-pdf=&quot; &amp; Chr(34) &amp; redactedPath &amp; Chr(34) &amp; &quot; &quot; &amp; Chr(34) &amp; htmlUri &amp; Chr(34)]" DisplayName="Start Process" FileName="[edgeExe]" sap:VirtualizedContainerService.HintSize="468.8,120" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
+    <Delay Duration="00:00:15" sap:VirtualizedContainerService.HintSize="468.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <ui:FileExistsX DisplayName="File Exists" Exists="[pdfExists]" sap:VirtualizedContainerService.HintSize="468.8,166.4" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[redactedPath]" />
+    <If Condition="[pdfExists]" sap:VirtualizedContainerService.HintSize="468.8,922.4" sap2010:WorkflowViewState.IdRef="If_2">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,444.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[System.IO.Path.Combine(outputDir, docStem + &quot;_manifest.json&quot;)]" sap:VirtualizedContainerService.HintSize="433.6,166.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[Newtonsoft.Json.JsonConvert.SerializeObject(&#xD;&#xA;    New With {&#xD;&#xA;        .doc = docStem,&#xD;&#xA;        .pdf = redactedPath,&#xD;&#xA;        .ts = DateTime.UtcNow.ToString(&quot;o&quot;)&#xD;&#xA;    }&#xD;&#xA;)]" />
+          <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[manifestPath]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[System.IO.Path.Combine(outputDir, docStem + "_manifest.json")]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[redactedPath]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[redactedPath]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="467.2,348" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;PDF generation failed for &quot; + docStem + &quot; at path: &quot; + redactedPath]" />
+          <Throw Exception="[New BusinessRuleException(&quot;Redacted PDF was not created.&quot;)]" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
+        </Sequence>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>

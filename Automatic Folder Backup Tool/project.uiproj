@@ -1,0 +1,6 @@
+{
+  "Name": "Automatic Folder Backup Tool",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}

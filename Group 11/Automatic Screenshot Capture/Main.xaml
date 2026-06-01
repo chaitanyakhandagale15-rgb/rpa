@@ -1,0 +1,128 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="690,667.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:Image" Name="saveImage" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome flipkart - Google Shopping" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="451.2,644" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="ce8366a0-60bb-48a6-93b7-283a49bbe81f" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,450.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="screenshot.png" FileNameMode="None" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,224.8" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" OutImage="[saveImage]" SaveScreenshotTo="Image" ScopeIdentifier="ce8366a0-60bb-48a6-93b7-283a49bbe81f" Version="V5" />
+            <uix:NSaveImage DisplayName="Save Image" FileName="C:\Users\Dell\OneDrive\Documents\UiPath\Automatic Screenshot Capture\saveImage.png" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="NSaveImage_1" Image="[saveImage]" Version="V5" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="2Uj3mAKShEuDOgojYLnkeg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVUSURBVGhD7ZrtayNFHMcLuqX4xrzwje/6ByjkzmytgrjdTY96Zy/hNvUBFHOg4ivJmxMfcbW3qVIxASme9EUqvmhaOHKnaGsSyWtBqBTRF+oF0aPXHrLQbCjNHYzMNptLfrObnZnNwxbvCx9odzc78808fGdnMzIyIEkLB+Ny2kzJej2npOsFTDRtZvCxmYWDcXj9sVV0oSYpabMi6ybqhqKbW7JuJuHnj43iGgrRGIUoupk7di2OKyynzSo00zS0JafrBUyzVYlrZN2sHivTpNmaIc/XNElDIXitNbZ1Mwk/g7+MuGYQ1wdOMp6IQMWxKXgdFL4Gtjie1OB1gZLVlUHXdGpVN0maEYKmA9218YTTXlmaloWSdDPc+aXVNHhNYATGYQ6epxWY3Q14PhDC3bG9ZZR0PQ6voZWs7yf99pS+yzLcauGa4aeSzS/PaBquwvOB0VHE7Cf9mLXVy3vd1V39H4UX//JC/X0rIvBkBLh4KVdtlIVgURIqt0pCBlXG2Ma9kj54yVr/diwAOln4Yhk1SkIwKQvV2+VRulh0WB468u7SOllQ0CgKYeiPEFzLuvH8J7+SBQSPCvTXIdrWtTE2HoAFBA600WU8K/P7cWiqG2tfvU4UEDQOu41lVsOpzzaJAobJX9/fj/4t3tdx7FZpTII+W2ruPhDGuvHT5Smi4EGAzX3+9UPo1csSmlo7iyJ5tQX+Hx9fvHICFb8dd5+44BMPDYNu5R+/e9Ay026wG+FCvPsGRNtTCjWDGMu4qy5ePUEY8sD7WZo2liD97Nq4+86uPwXNUJDoHktYU+n9FWiGhrMfXUe/XT1JVNYv/GYtrkB/hGS9loVmaIl9/Lfx+zcPV2Clebm2Gar6MIsiqwnv/TC4vcIKHhKNkpBqFEfxYp4wQYlxWLpXi6ypBcIEE4kU9EeINYudqWkHG2Pjh0VhhdG40SgKWbw6ElfPJUkDjKwm3DPYFk8WO2C0vzW4Xb4nbpkvCbi7Gx0GS8JWozyaa/wgJFEh1PqMmFerhAFGxPU59wxul4MBDvj3k3vSunkVwfu6Cr7n4YR7tzGSVyuw8qzgHgLv6yreLIbw7DjilRGsPB8UGWyLN4sdYH7BjScasvJceGewLTz+HCrPjKLXsvDeXsJR4lB5dmgy2JbfLL5Dnfn9Eq4oUXkOxNU5+t6Ff5dBVp6H4RmmymBbPcrioRqeXH2ObcIkK88DexafHHQG2+pFFvO8Mu3FLC3m1S14X08p6VoBGmDFRw4b0AQbDBlsy28W48ULvCet/K60xLzKPHf0IosdY6Eal0I70uQ4Bv8Nz2P57tYsGWzLZxa31rHY1E05ktpTxMqeHDF2ZRG1g4/hc7vyhLYzM9kaAn6elibWVOa5Y2Sa+DUNE8mb0UnpyEinQS+sL2b68bCvVmbJYFu8WRzTrm/tyWIGGmFlTxFzz1yKce14eG7Nuol1y/bZ9/5A22diRLfl5c/TE8bscox5xoY+qMWSxdjsL6dniUr7ZTv2GDqzHCdMucGVwbZos/j8Wz/3xawNm2mODLbltWU7+8ENtPTyElHBflB+4QkHcySP5FXmR9KWjn6y7260emqKqFg/ufjOKcIgCcXWrJtefHs7iccm5o3UJlp8bQVV1FcGbtTm2syj6MkvzzmYvANXBtv6Z1oMw0KHzbxXK/NksC1DCodggcPGayxzZ7CtXVmswkKHjVu3ZtqaddOOHNFggcPmfOZpwqwFz0MD1FG3nghUK7/54Qxhtietaws/yvE8CPSLTy9EgeFEhXkPi0Y70Yh0Qxaz1hPNEMlciFYia3MFMa9mWWfl/wCU98c5ePz3ZQAAAABJRU5ErkJggg==" InformativeScreenshot="4f3f1e0bb559fdabba9d898dbee12cda.jpg" Reference="vAKnPqD6kUmZ3qG_qv-QAw/XL5JXHnLa0S2SOyJGLtMzA" Selector="&lt;html app='chrome.exe' title='flipkart - Google Shopping' /&gt;" Url="https://www.google.com/search?sca_esv=a5803e55cb45b4ee&amp;sxsrf=ANbL-n5TbtKfBdkI7mLA-nyoAHNc9pvL1A:1780103744006&amp;udm=28&amp;fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKp9lEhFAN_4ain3HSNQWw-mBcFY_b7_fFBjPEsWR5sze70UoGyE3eK9xvjeO54So6LPYZAQ3cBmMpOv98rO2UkZmD3RVS9kpDpZKDbBqOePwSo-kDbQojh0ZwA8JWrCVLAb2CBA_Xyr3pzsVuFmqF6A_a5NlKmxjnICH-2TuPUSQhdQH8fR06aFGAjJqM5PhGsWmJoQg&amp;q=flipkart&amp;ved=1t:220175&amp;ictx=111&amp;biw=511&amp;bih=730&amp;dpr=1.25" Version="V3" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

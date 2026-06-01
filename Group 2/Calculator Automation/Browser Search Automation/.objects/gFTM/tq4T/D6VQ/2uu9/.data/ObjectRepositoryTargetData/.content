@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="M1Snm8qDbE2UVu8efi17Gw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="google.com/search" DesignTimeRectangle="9, 381, 940, 3536" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='rcnt' tag='DIV' /&gt;" Guid="9fae7df8-c5fe-497a-96d9-9aa780057ea5" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Uipath Tutorials - Google Search' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="89077e2cd82ac1c3fe4a08088ed35a49.jpg" xmlns="">0QE02T2_NK0ygDUbbTGJ8iw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TakeScreenshot</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

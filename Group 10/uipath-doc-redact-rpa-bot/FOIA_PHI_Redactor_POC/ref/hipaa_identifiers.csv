@@ -1,0 +1,19 @@
+Name,PatternType,Pattern
+Names,regex,"\b([A-Z][a-z]+(?:\s[A-Z][a-z]+){0,3})\b"
+Geographic_Subdivisions,keyword,Street|Avenue|Ave|Road|Rd|Boulevard|Blvd|City|County|Zip
+All_Elements_Dates,regex,\b(0?[1-9]|1[0-2])[/-](0?[1-9]|[12]\d|3[01])[/-](19|20)\d{2}\b
+Telephone_Numbers,regex,\(?\d{3}\)?[ -.]?\d{3}[ -.]?\d{4}
+Fax_Numbers,regex,\(?\d{3}\)?[ -.]?\d{3}[ -.]?\d{4}
+Email_Addresses,regex,"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
+SSN,regex,(?<!\d)(\d{3}-\d{2}-\d{4})(?!\d)
+Medical_Record_Numbers,regex,"MRN[:\s]*[A-Z0-9-]{6,12}"
+Health_Plan_Beneficiary_Numbers,regex,"HPN[:\s]*[A-Z0-9-]{6,12}"
+Account_Numbers,regex,"Acct[:\s]*[0-9]{6,12}"
+Certificate_License_Numbers,regex,"Lic(?:ense)?[:\s]*[A-Z0-9-]{4,}"
+Vehicle_Identifiers,regex,(VIN|Vehicle\sID)[:\s]*[A-HJ-NPR-Z0-9]{17}
+Device_Identifiers,regex,Device\sID[:\s]*[A-Z0-9-]+
+Web_URLs,regex,https?:\/\/[^\s]+
+IP_Addresses,regex,\b((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)\b
+Biometric_Identifiers,keyword,fingerprint|retina|iris|voiceprint|facial
+Full_Face_Photos,keyword,photo|photograph|selfie
+Any_Other_Unique_ID,keyword,unique identifier|patient ID|case number

@@ -1,0 +1,6 @@
+{
+  "Name": "12_E_Word_Document_Creator",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}

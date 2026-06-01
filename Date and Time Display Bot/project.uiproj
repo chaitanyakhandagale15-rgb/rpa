@@ -1,0 +1,6 @@
+{
+  "Name": "Date and Time Display Bot",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}

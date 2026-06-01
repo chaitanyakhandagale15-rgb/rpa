@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome Gmail",
+  "Type": "App",
+  "Id": "HmT1LdrOb02XHhNbIkZnRA",
+  "Reference": "MLIjzdIbCkOX2r4E9CAsLA/HmT1LdrOb02XHhNbIkZnRA",
+  "Created": "2026-05-31T09:29:55.0230767Z",
+  "Updated": "2026-05-31T09:29:55.0230767Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

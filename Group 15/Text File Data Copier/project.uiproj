@@ -1,0 +1,6 @@
+{
+  "Name": "Text File Data Copier",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}

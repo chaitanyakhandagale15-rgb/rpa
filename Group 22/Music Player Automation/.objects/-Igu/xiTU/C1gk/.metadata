@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Media Player",
+  "Type": "Screen",
+  "Id": "C1gkS4Etokaqqcwgyupwog",
+  "Reference": "RTQCRsd25ke-ys5xqRWHzg/C1gkS4Etokaqqcwgyupwog",
+  "ParentRef": "RTQCRsd25ke-ys5xqRWHzg/xiTUzpEYGEyi57BP1taSPA",
+  "Created": "2026-05-30T11:58:24.8684068Z",
+  "Updated": "2026-05-30T11:58:24.8684068Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

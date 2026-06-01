@@ -1,0 +1,13 @@
+﻿{
+  "Name": "excel.txt - Notepad",
+  "Type": "Screen",
+  "Id": "xa3Bv7zMTUq5PIHV6NSPMA",
+  "Reference": "I8Qv2108E0i7CYuozed2Aw/xa3Bv7zMTUq5PIHV6NSPMA",
+  "ParentRef": "I8Qv2108E0i7CYuozed2Aw/20V-qpL-Xk6kVu9-vAq5Rw",
+  "Created": "2026-05-31T08:52:47.4335309Z",
+  "Updated": "2026-05-31T08:52:47.4335309Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

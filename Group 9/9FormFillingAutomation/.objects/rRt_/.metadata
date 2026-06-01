@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome demosite",
+  "Type": "App",
+  "Id": "rRt_f_mgs0C_Sl3K3ajE6A",
+  "Reference": "GWcK3gILFUS9qB8u1D_nZQ/rRt_f_mgs0C_Sl3K3ajE6A",
+  "Created": "2026-05-30T08:36:45.4343275Z",
+  "Updated": "2026-05-30T08:36:45.4343275Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "Name": "Word Document Creator",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}

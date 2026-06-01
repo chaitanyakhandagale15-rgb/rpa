@@ -1,0 +1,27 @@
+﻿{
+  "SSN": "(?<!\\d)(\\d{3}-\\d{2}-\\d{4})(?!\\d)",
+  "DOB": "\\b(?:(?:0?[1-9]|1[0-2])[\\/\\-](?:0?[1-9]|[12]\\d|3[01])[\\/\\-](?:19|20)\\d{2}|(?:19|20)\\d{2}[\\/\\-](?:0?[1-9]|1[0-2])[\\/\\-](?:0?[1-9]|[12]\\d|3[01])|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\\.?\\s+(?:0?[1-9]|[12]\\d|3[01]),\\s*(?:19|20)\\d{2})\\b",
+  "DatePartial": "\\b(0?[1-9]|1[0-2])[\\/-](0?[1-9]|[12]\\d|3[01])\\b",
+  "Phone": "(?<!\\d)(?:\\+1[ .-]?)?(?:\\(\\d{3}\\)|\\d{3})[ .-]?\\d{3}[ .-]?\\d{4}(?:\\s*(?:x|ext\\.?|extension)\\s*\\d{1,5})?(?!\\d)",
+  "Email": "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b",
+
+  "ZipCode": "\\b\\d{5}(?:-\\d{4})?\\b",
+  "CityStateZip": "\\b([A-Z][a-zA-Z]+(?:\\s+[A-Z][a-zA-Z]+)*),\\s*(AL|AK|AS|AZ|AR|CA|CO|CT|DC|DE|FL|GA|GU|HI|IA|ID|IL|IN|KS|KY|LA|MA|MD|ME|MI|MN|MO|MP|MS|MT|NC|ND|NE|NH|NJ|NM|NV|NY|OH|OK|OR|PA|PR|RI|SC|SD|TN|TX|UM|UT|VA|VI|VT|WA|WI|WV|WY)\\s*\\d{5}(?:-\\d{4})?\\b",
+  "AddressLine": "(?im)^(?:\\d{1,6}\\s+)?[A-Za-z0-9'.#\\-\\s]+\\b(?:St|Street|Ave|Avenue|Rd|Road|Blvd|Boulevard|Ln|Lane|Dr|Drive|Ct|Court|Pl|Place|Way|Ter|Terr|Terrace)\\b\\.?[,\\s]*.*$",
+
+  "MRN": "\\b(?:MRN|Med\\.?\\s*Rec(?:ord)?\\s*No\\.?|Medical\\s*Record\\s*Number)[:\\s]*([A-Z0-9\\-]{6,12})\\b",
+  "HealthPlanBeneficiary": "\\b(?:HICN|MBI|Medicare\\s*Beneficiary\\s*ID)[:\\s]*([A-Z0-9]{8,14})\\b",
+
+  "AccountNumber": "\\b(?:Account|Acct\\.?|A\\/C)[:\\s]*([A-Z0-9\\-]{6,})\\b",
+  "CertificateLicense": "\\b(?:License|Lic\\.?|Cert(?:ificate)?)[:\\s]*([A-Z0-9\\-]{5,})\\b",
+
+  "VehicleVIN": "\\b(?:VIN)[:\\s]*([A-HJ-NPR-Z0-9]{17})\\b",
+  "VehiclePlate": "\\b(?:Plate|Tag)[:\\s]*([A-Z0-9\\-]{4,10})\\b",
+
+  "DeviceSerial": "\\b(?:Device|Serial|S\\/N|SN)[:\\s]*([A-Z0-9\\-]{6,})\\b",
+
+  "URL": "\\bhttps?:\\/\\/[\\w\\-\\.]+(?:\\/[\\w\\-\\.\\/%?=&#]*)?\\b",
+  "IPAddressV4": "\\b(?:(?:25[0-5]|2[0-4]\\d|1?\\d?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|1?\\d?\\d)\\b",
+
+  "NameLine": "(?im)^(?:Patient|Subscriber|Member|Provider)\\s*(?:Name)?[:\\s]+([A-Z][A-Za-z'\\-]+(?:\\s+[A-Z][A-Za-z'\\-]+){1,3})$"
+}

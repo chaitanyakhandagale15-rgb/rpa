@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome demosite",
+  "Type": "Screen",
+  "Id": "h-54paqXgkGtOXlAo2_mvA",
+  "Reference": "GWcK3gILFUS9qB8u1D_nZQ/h-54paqXgkGtOXlAo2_mvA",
+  "ParentRef": "GWcK3gILFUS9qB8u1D_nZQ/ECAvzkJSdEW6-3kqPXwnrQ",
+  "Created": "2026-05-30T08:36:45.7236952Z",
+  "Updated": "2026-05-30T08:36:45.7236952Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

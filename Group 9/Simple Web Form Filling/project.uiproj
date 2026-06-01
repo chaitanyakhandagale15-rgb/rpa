@@ -1,0 +1,6 @@
+{
+  "Name": "Simple Web Form Filling",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}

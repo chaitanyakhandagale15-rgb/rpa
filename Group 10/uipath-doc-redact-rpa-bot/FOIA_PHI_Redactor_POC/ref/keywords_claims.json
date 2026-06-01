@@ -1,0 +1,5 @@
+{
+  "DentalTerms": ["ADA Dental Claim Form","American Dental Association","CDT","Tooth","Surface","Date of Service","DOS","Procedure Code","Provider Name","Subscriber ID","Member ID"],
+  "InsuranceTerms": ["UHC Dental","UnitedHealthcare Dental","uhcdental.com","es.uhc.com","Claim Number","Group Number","Plan Name","Benefit","Coverage","EOB"],
+  "GeneralHealthTerms": ["Patient Name","Diagnosis","Treatment","Provider Signature","Authorization","Referral"]
+}

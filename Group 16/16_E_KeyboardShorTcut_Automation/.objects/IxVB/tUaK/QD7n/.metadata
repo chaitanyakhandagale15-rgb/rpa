@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Document1 - Word",
+  "Type": "Screen",
+  "Id": "QD7n02UreE2hqW_roHzj6g",
+  "Reference": "I8Qv2108E0i7CYuozed2Aw/QD7n02UreE2hqW_roHzj6g",
+  "ParentRef": "I8Qv2108E0i7CYuozed2Aw/tUaK_S4_NkqcP41f7b-4rQ",
+  "Created": "2026-05-31T08:54:24.9433164Z",
+  "Updated": "2026-05-31T08:54:24.9433164Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

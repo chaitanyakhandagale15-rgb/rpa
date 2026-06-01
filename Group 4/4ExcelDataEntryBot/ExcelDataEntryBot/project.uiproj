@@ -1,0 +1,6 @@
+{
+  "Name": "ExcelDataEntryBot",
+  "ProjectType": "Process",
+  "Description": "",
+  "MainFile": "Main.xaml"
+}

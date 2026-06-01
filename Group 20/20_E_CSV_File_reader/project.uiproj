@@ -1,0 +1,6 @@
+{
+  "Name": "20_E_CSV_File_reader",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Email or phone",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "dLeaGO2VCE2MiRM7Ub5jQA",
+  "Reference": "MLIjzdIbCkOX2r4E9CAsLA/dLeaGO2VCE2MiRM7Ub5jQA",
+  "ParentRef": "MLIjzdIbCkOX2r4E9CAsLA/jRY6oLlfrEGMaulhZJX7Og",
+  "Created": "2026-05-31T09:30:21.9528414Z",
+  "Updated": "2026-05-31T09:30:21.9528414Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

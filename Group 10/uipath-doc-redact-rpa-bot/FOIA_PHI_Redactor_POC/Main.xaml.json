@@ -1,0 +1,69 @@
+{
+  "DisplayName": "Main",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "ConfidenceThreshold",
+      "DisplayName": "ConfidenceThreshold",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "0.8",
+      "Widget": null,
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "RefDir",
+      "DisplayName": "RefDir",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": ".\\ref",
+      "Widget": null,
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "LogDir",
+      "DisplayName": "LogDir",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": ".\\logs",
+      "Widget": null,
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "OutputDir",
+      "DisplayName": "OutputDir",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": ".\\output",
+      "Widget": null,
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "InputDir",
+      "DisplayName": "InputDir",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": ".\\input",
+      "Widget": null,
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

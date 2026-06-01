@@ -1,0 +1,6 @@
+{
+  "Name": "Automatic Application Opener",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}

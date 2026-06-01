@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Calculator",
+  "Type": "Screen",
+  "Id": "NT88f6g9c0ylY-C81yZjTw",
+  "Reference": "7zXE7q_8IEK6imTuwvYNLA/NT88f6g9c0ylY-C81yZjTw",
+  "ParentRef": "7zXE7q_8IEK6imTuwvYNLA/14Bddp5e6U6bGuOFfTwf-A",
+  "Created": "2026-05-29T05:37:00.2247022Z",
+  "Updated": "2026-05-29T05:37:00.2247022Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

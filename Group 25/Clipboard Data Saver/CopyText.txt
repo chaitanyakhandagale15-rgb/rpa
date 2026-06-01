@@ -1,0 +1,11 @@
+Sequence
+│
+├─ Input Dialog → num
+├─ Assign result = ""
+│
+├─ For Each item in Enumerable.Range(1,10)
+│    └─ Assign
+│         result = result + num.ToString() + ...
+│
+├─ Write Text File → result
+└─ Message Box → result
